@@ -50,9 +50,11 @@ void update(LL idx, LL val, LL node = 1, LL start = 0, LL end = n - 1)
 
 LL query(LL l, LL r, LL node = 1, LL start = 0, LL end = n - 1)
 {
+    //no overlap
     if (l > end || start > r)
         return 0;
 
+    //complete overlap
     if (start >= l && end <= r)
         return tree[node];
 
